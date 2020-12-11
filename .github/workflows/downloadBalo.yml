@@ -1,0 +1,28 @@
+name: CI
+
+on: [push]
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Ballerina Build
+              uses: ballerina-platform/ballerina-action/@slp7
+              with:
+                  args:
+                      build -c --skip-tests
+              env:
+                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                  ORG_NAME: ${{ secrets.ORG_NAME }}
+                  REPO_NAME: ${{ secrets.REPO_NAME }}
+                  ASSIGNEE: ${{ secrets.ASSIGNEE }}
+                  RESOURCE_PATH: ${{ secrets.RESOURCE_PATH }}
+                  JAVA_OPTS: -DBALLERINA_DEV_COMPILE_BALLERINA_ORG=true
+            - name: Archive distribtuions
+              uses: actions/upload-artifact@v2
+              with:
+              name: Balo ZIP
+              path: target/balo/testds-test_GB-any-0.99.7.balo
