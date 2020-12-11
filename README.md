@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ballerina-platform/module-ballerinax-github.svg?branch=master)](https://travis-ci.org/ballerina-platform/module-ballerinax-github)
 
-# Ballerina GitHub Endpoint -TEST
+# Ballerina GitHub Endpoint -TEST with testCases
 
 ###### GitHub brings together the world's largest community of developers to discover, share, and build better software. From open source projects to private team repositories, GitHub is an all-in-one platform for collaborative development.
 
