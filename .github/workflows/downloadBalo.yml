@@ -24,8 +24,8 @@ jobs:
             - name: Archive distribtuions
               uses: actions/upload-artifact@v2
               with:
-                  name: Balo_ZIP
-                  path: target/balo/testds-test_GB-any-0.99.7.balo
+                  name: generated_target_directory
+                  path: target/
                   
             
                    
