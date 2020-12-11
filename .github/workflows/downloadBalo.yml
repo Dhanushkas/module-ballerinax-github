@@ -27,8 +27,5 @@ jobs:
                   name: Balo_ZIP
                   path: target/balo/testds-test_GB-any-0.99.7.balo
                   
-            - name: Download a single artifact
-              uses: actions/download-artifact@v2
-              with:
-                name: Balo_ZIP
+            
                    
